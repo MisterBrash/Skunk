@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="skunk, maths, mathematics, game, probability, dice">
+	<meta name="description" content="A dice probability game where players accumulate points to try and win with the highest score. Used as a game in classrooms to discuss probability and chance. Click on 'How to play' for instructions.">
+	<meta name="author" content="Matt Brash">
+	<title>SKUNK</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="./images/skunk32dark.png" />
+
+  <!-- Image preloading -->
+  <link rel="preload" as="image" href="./images/skunk240.png" />
+  <link rel="preload" as="image" href="./images/placeholder.png" />
+  <link rel="preload" as="image" href="./images/1.png" />
+  <link rel="preload" as="image" href="./images/2.png" />
+  <link rel="preload" as="image" href="./images/3.png" />
+  <link rel="preload" as="image" href="./images/4.png" />
+  <link rel="preload" as="image" href="./images/5.png" />
+  <link rel="preload" as="image" href="./images/6.png" />
+</head>
+
+<body>
+  <div class="options" id="options" style="background-color:darkred;">
+  
+    <div class="box" style="background-color:darkred;text-align:left;">
+      <label class="checkbox">Allow 1's on first roll 
+        <input type="checkbox" checked="checked" id="firstRoll">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <div class="box2" style="background-color:darkred;text-align:right;">
+      <a href="#" id="insBtn" style="color:white;">How to play</a>
+    </div>
+
+  </div>
+  <br>
+  <div id="mainTables">
+  <table width="100%"><tr>
+    <td align="center" valign=top>
+    
+      <table id="skunkTable">
+        <tr id="tableHeading">
+          <th id="S">S</th>
+          <th id="K">K</th>
+          <th id="U">U</th>
+          <th id="N">N</th>
+          <th id="K2">K</th>
+        </tr>
+        <tr id="tableData" align="center">
+          <td id="sScore"></td>
+          <td id="kScore"></td>
+          <td id="uScore"></td>
+          <td id="nScore"></td>
+          <td id="k2Score"></td>
+        </tr>
+      </table>
+      
+    </td>
+    <td align="center" width="50%" valign=top>
+    
+      <table id="diceTable">
+        <tr id="diceRow">
+          <td id="diceData">
+            <img id="die1" src="./images/placeholder.png" height="120px">
+            <img id="die2" src="./images/placeholder.png" height="120px">
+          </td>
+        </tr>
+        <tr id="statusRow">
+          <td id="statusData"></td>
+        </tr>  
+        <tr id="scoreRow">
+          <td id="scoreData"></td>
+        </tr>        
+      </table>
+      
+    </td>
+  </tr></table>
+  </div>
+
+  <footer>  
+    <div>
+      <img src="./images/skunk32.png" style="padding: 10px 0px 10px 30px;float:left;" />
+      <span id="footer">Click the dice to roll<br>Double-click a column to select it.</span>
+    </div>
+  </footer>
+
+  <div id="instructions" class="modal">
+    <div class="modal-content">
+      <span id="close" class="close">&times;</span>
+      <img src="./images/skunk64.png" style="float:right;-webkit-transform: scaleX(-1);transform: scaleX(-1);padding: 0 10px 0 30px;" />
+      <div style="padding:0 0 0 10px;">
+        <p>The game consists of five (5) rounds - <b>S K U N K</b>. Play begins with the "S" column and continues through the "K" column. The object of the game is to accumulate the highest number of points by the end of round "K".</p>
+        <p>At the beginning of each round, all players are collecting points.</p>
+        <p>To accumulate points, a pair of dice is rolled. A player gets the total amount of the dice and records it under the current column heading - unless a one (1) comes up.</p>
+        <p>If a one (1) comes up, play is over for that round and all the player's points in that column are wiped out (unless they locked-in their points - see below).</p>
+        <p>🐍 If "snake eyes" comes up, all points accumulated in prior columns are wiped out as well! (Unless a player has locked-in for that column)</p>
+        <p><strong>Locking-in: </strong>After each roll, a player must decide if they wish to lock-in their points for the current column or to keep accumulating points. This can be done in several ways, for example sitting to lock-in and standing again on the next column or turning a coloured marker over on the table, etc...</p>
+        <p>If all players have locked-in, double-click the next column heading to continue.</p>
+        <p>If "allow 1's on first roll" is selected, all players must take the consequences on first rolls of each column.</p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+
+html, body {
+  height: 100%;
+  font-size: 150%;
+  width: 100%;
+  margin: 0;
+  display: table;
+  background-color:lavenderblush;
+}
+
+th {
+  /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+  font-weight:bold;
+  font-size: 160%;
+  padding:  0px 20px 0px 20px;
+  cursor: pointer;
+  border-radius: 150px;
+  /* Disable text selection */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+td, #diceData, #skunkTable {
+  vertical-align: top;
+  align-content: center;
+}
+
+#statusData {
+  align-content: center;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight:bold;
+  font-size: 100%;
+}
+
+/* The Modal instructions panel */
+/* Thank goodness for w3schools! */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  box-shadow: 0.2rem 0.2rem 0.95rem black;
+  border-radius: 10px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#options, footer {
+  background-color: brown;
+	color: white;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 14pt;
+}
+
+footer {
+	text-align: center;
+  display: table-row;
+  height: 0;
+  z-index: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: auto;
+  background-color:darkred;
+  padding: 5px 20px 5px 20px;
+}
+
+.box2 {
+  background-color:darkred;
+  padding: 5px 20px 5px 20px;
+}
+
+/** 
+ * Styling our own checkbox 
+ * Thank goodness for w3schools! 
+ **/
+
+/* The container */
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  border-radius: 15px;
+  background-color: lavenderblush;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: lavenderblush;
+  border-radius: 15px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 9px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
